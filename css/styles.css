@@ -1548,8 +1548,10 @@ p {
 
     .nav--homepage .nav__toggle span {
         background-color: #3A3A3A;
-        width: 20px;
-        height: 2px;
+        width: 18px;
+        height: 2.5px;
+        border-radius: 3px;
+        /* Rounded bars */
     }
 
     .nav--homepage .nav__toggle.active {
@@ -1559,6 +1561,17 @@ p {
 
     .nav--homepage .nav__toggle.active span {
         background-color: white;
+    }
+
+    /* Homepage logo - more visible */
+    .nav--homepage .nav__logo {
+        color: white !important;
+        text-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.9),
+            0 4px 20px rgba(0, 0, 0, 0.7),
+            0 0 40px rgba(0, 0, 0, 0.5) !important;
+        font-size: 1.4rem;
+        font-weight: 600;
     }
 
     .hero__cta {
