@@ -1460,138 +1460,50 @@ p {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 85%;
-        max-width: 380px;
+        width: 80%;
+        max-width: 320px;
         height: 100vh;
         height: 100dvh;
-        background: linear-gradient(135deg, rgba(255, 254, 249, 0.98) 0%, rgba(247, 244, 239, 0.98) 100%);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        background-color: #FFFEF9;
         flex-direction: column;
-        padding: 120px var(--space-2xl) var(--space-2xl);
-        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
-        border-left: 1px solid rgba(200, 170, 110, 0.2);
-        overflow-y: auto;
-    }
-
-    /* Decorative gold line at top */
-    .nav__menu::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, var(--muted-gold), var(--gold-accent, #D4BA7A), var(--muted-gold));
-    }
-
-    /* Decorative flourish */
-    .nav__menu::after {
-        content: '✦';
-        position: absolute;
-        top: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.2rem;
-        color: var(--muted-gold);
-        letter-spacing: 1em;
-        opacity: 0.6;
+        padding: 100px var(--space-xl) var(--space-xl);
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
     }
 
     .nav__menu.active {
         right: 0;
     }
 
-    /* Menu link item container */
-    .nav__menu li {
-        opacity: 0;
-        transform: translateX(30px);
-        transition: all 0.4s ease;
-    }
-
-    .nav__menu.active li {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .nav__menu.active li:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-
-    .nav__menu.active li:nth-child(2) {
-        transition-delay: 0.15s;
-    }
-
-    .nav__menu.active li:nth-child(3) {
-        transition-delay: 0.2s;
-    }
-
-    .nav__menu.active li:nth-child(4) {
-        transition-delay: 0.25s;
-    }
-
-    .nav__menu.active li:nth-child(5) {
-        transition-delay: 0.3s;
-    }
-
-    .nav__menu.active li:nth-child(6) {
-        transition-delay: 0.35s;
-    }
-
-    /* Premium link styling */
+    /* Simple dark text for visibility */
     .nav__link {
-        color: var(--charcoal);
-        text-shadow: none;
-        font-size: 1.1rem;
+        color: #3A3A3A !important;
+        text-shadow: none !important;
+        font-size: 1.2rem;
         font-family: var(--font-heading);
         font-weight: 500;
-        letter-spacing: 0.15em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         padding: var(--space-lg) 0;
-        display: flex;
-        align-items: center;
-        gap: var(--space-md);
+        display: block;
         width: 100%;
-        text-align: left;
-        border-bottom: 1px solid rgba(200, 170, 110, 0.15);
-        position: relative;
-        transition: all 0.3s ease;
-    }
-
-    /* Gold dot before each link */
-    .nav__link::before {
-        content: '';
-        width: 6px;
-        height: 6px;
-        background-color: var(--muted-gold);
-        border-radius: 50%;
-        opacity: 0;
-        transform: scale(0);
-        transition: all 0.3s ease;
-    }
-
-    .nav__link:hover::before,
-    .nav__link--active::before {
-        opacity: 1;
-        transform: scale(1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .nav__link:hover {
-        color: var(--muted-gold);
-        padding-left: var(--space-sm);
+        color: var(--muted-gold) !important;
     }
 
     .nav__link--active {
-        color: var(--muted-gold);
-        font-weight: 600;
+        color: var(--muted-gold) !important;
     }
 
+    .nav__link::before,
     .nav__link::after {
-        display: none;
+        display: none !important;
     }
 
-    /* Enhanced toggle button */
+    /* Round toggle button - KEEP this style */
     .nav__toggle {
         display: flex;
         z-index: 1001;
@@ -1601,24 +1513,27 @@ p {
         height: 44px;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease;
     }
 
-    .nav__toggle:hover {
-        background: var(--muted-gold);
-    }
-
-    .nav__toggle:hover span {
-        background-color: white;
-    }
-
     .nav__toggle.active {
-        background: var(--charcoal);
+        background: #3A3A3A;
     }
 
     .nav__toggle.active span {
         background-color: white;
+    }
+
+    /* FIX: Make logo visible on mobile */
+    .nav__logo {
+        color: white !important;
+        text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5) !important;
+        font-size: 1.3rem;
+    }
+
+    .nav__logo span {
+        color: var(--muted-gold) !important;
     }
 
     .hero__cta {
