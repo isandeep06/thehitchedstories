@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1ZBHQMYZN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-L1ZBHQMYZN');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="thehitchedstories Portfolio - Browse our wedding photography galleries featuring weddings, pre-wedding shoots, couples, candid moments, and cinematic wedding films.">
+    <meta name="keywords"
+        content="wedding portfolio, wedding gallery, wedding photos, pre-wedding photos, wedding films, engagement photos">
+    <meta name="author" content="thehitchedstories">
+
+    <title>Portfolio | thehitchedstories</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Preconnect to Cloudinary CDN -->
+    <link rel="preconnect" href="https://res.cloudinary.com">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">the<span>hitched</span>stories</a>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="about.html" class="nav__link">About</a></li>
+                <li><a href="portfolio.html" class="nav__link nav__link--active">Portfolio</a></li>
+                <li><a href="services.html" class="nav__link">Services</a></li>
+                <li><a href="testimonials.html" class="nav__link">Testimonials</a></li>
+                <li><a href="contact.html" class="nav__link">Contact</a></li>
+            </ul>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Our Portfolio</h1>
+            <p class="page-header__breadcrumb"><a href="index.html">Home</a> / Portfolio</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-header__label">Our Work</p>
+                <h2 class="section-header__title">Stories We've Captured</h2>
+                <div class="section-header__divider"></div>
+                <p class="section-header__text">Browse through our collection of wedding stories, each one unique, each
+                    one filled with love and authentic emotions.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="weddings">Weddings</button>
+                <button class="filter-btn" data-filter="prewedding">Pre-Wedding</button>
+                <button class="filter-btn" data-filter="couples">Couples</button>
+                <button class="filter-btn" data-filter="candid">Candid Moments</button>
+                <button class="filter-btn" data-filter="films">Wedding Films</button>
+                <button class="filter-btn" data-filter="stories">Stories</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="portfolioGrid">
+                <!-- All Category Images -->
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_mlgbsk"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Beautiful Moments</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/3_lalvp8"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Love & Joy</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/4_sbww1e"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Special Day</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/6_wv7t0u"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Timeless Love</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/33_xto16n"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Candid Smiles</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/55_qiubhp"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Eternal Bond</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1-2_pvejl7"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Together Forever</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/33_Page_1_p1tutp"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Precious Moments</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/0_izyl6t"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Wedding Bliss</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/2-2_zin4zu"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Pure Love</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/0_-_Copy_nozxgi"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Celebration</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/3_Page_5-1_dqjqfs"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Happy Couple</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/2_Page_5_smcft6"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Joy & Happiness</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/6_Page_7_t1tpwo"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Wedding Day</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/6_Page_2_vyqmao"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Romantic Portraits</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_1-1_my6ty4"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Loving Moments</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/3_Page_2-1_zblpx3"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Dreamy Memories</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_3_qgqabn"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Unforgettable Day</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_1-2_zyyuiu"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Together Always</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/6_Page_3_vhp5oi"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Magic Moments</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/6_Page_6_jnbqw2"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Beautiful Union</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_3-1_kmnbgw"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Cherished Love</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/3_Page_1-1_sodkmj"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Blissful Journey</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/3_Page_4-1_e9bppe"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">True Happiness</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/0_Page_1_rdtjq3"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Perfect Match</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_5_yzyeym"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Endless Love</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_2-1_ujtrvl"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Soulmates</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/2_Page_3_gl25de"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Love Story</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/3_Page_7_tanox2"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Wedding Ceremony</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_2_jyjjjm"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Divine Love</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/0_Page_1.jpg_Page_1_rkdr07"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Special Occasion</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/2_Page_1_igdzz0"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Forever Yours</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/2_Page_4_zdecgw"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Joyful Hearts</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/2_Page_2_yjcya1"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Sweet Memories</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_6_hgj3vc"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Heartfelt Vows</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/6_Page_9_suytwm"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Love Eternal</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/6_Page_4_btqzen"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Sacred Bond</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/6_Page_8_anrst2"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Golden Hour</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/65_Page_1_igyfnd"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Celebration Time</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/1_Page_2-2_hzoce6"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Happy Union</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/26_Page_1_xyzboe"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Wedding Bliss</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="all">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/s10_pb752c"
+                        alt="Wedding Photography" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Perfect Day</h4>
+                            <p class="gallery-item__category">Wedding Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stories -->
+                <a href="stories/hema-prashant.html" class="gallery-item reveal" data-category="stories">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Hema_Prashant_gycirr"
+                        alt="Hema & Prashant Story" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Hema & Prashant</h4>
+                            <p class="gallery-item__category">View Story →</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="stories/mera-vishal.html" class="gallery-item reveal" data-category="stories">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Mera_and_vishal_mdygfg"
+                        alt="Mera & Vishal Story" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Mera & Vishal</h4>
+                            <p class="gallery-item__category">View Story →</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="stories/neha-amar.html" class="gallery-item reveal" data-category="stories">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Neha_Amar_bh53d8"
+                        alt="Neha & Amar Story" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Neha & Amar</h4>
+                            <p class="gallery-item__category">View Story →</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="stories/rita-raju.html" class="gallery-item reveal" data-category="stories">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Rita_Raju_dxnf04"
+                        alt="Rita & Raju Story" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Rita & Raju</h4>
+                            <p class="gallery-item__category">View Story →</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="stories/sakshi-abhinav.html" class="gallery-item reveal" data-category="stories">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Sakshi_Abhinav_i6uycr"
+                        alt="Sakshi & Abhinav Story" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Sakshi & Abhinav</h4>
+                            <p class="gallery-item__category">View Story →</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="stories/shradha-vikas.html" class="gallery-item reveal" data-category="stories">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Shradha_Vikas_xdrtsd"
+                        alt="Shradha & Vikas Story" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <div class="gallery-item__info">
+                            <h4 class="gallery-item__title">Shradha & Vikas</h4>
+                            <p class="gallery-item__category">View Story →</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2 class="cta-section__title">Ready to Create Your Story?</h2>
+            <p class="cta-section__text">Let's capture your love story with the same care and creativity you see in our
+                portfolio.</p>
+            <a href="contact.html" class="btn btn--primary">Book a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">the<span>hitched</span>stories</h3>
+                    <p class="footer__tagline">Capturing timeless love stories through authentic, emotional, and
+                        cinematic wedding photography.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/thehitchedstories" class="social-link" aria-label="Instagram"
+                            target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.wedmegood.com/profile/The-Hitched-Stories-2414582" class="social-link"
+                            aria-label="WedMeGood" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/919569154042" class="social-link" aria-label="WhatsApp" target="_blank"
+                            rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html" class="footer__link">Wedding Photography</a></li>
+                        <li><a href="services.html" class="footer__link">Pre-Wedding Shoots</a></li>
+                        <li><a href="services.html" class="footer__link">Engagement Sessions</a></li>
+                        <li><a href="services.html" class="footer__link">Destination Weddings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li><a href="mailto:contact@thehitchedstories.com"
+                                class="footer__link">contact@thehitchedstories.com</a></li>
+                        <li><a href="tel:+919876543210" class="footer__link">+91 98765 43210</a></li>
+                        <li><a href="contact.html" class="footer__link">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2026 thehitchedstories. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" aria-label="Close">&times;</button>
+        <button class="lightbox__nav lightbox__prev" aria-label="Previous">&#10094;</button>
+        <button class="lightbox__nav lightbox__next" aria-label="Next">&#10095;</button>
+        <div class="lightbox__content">
+            <img src="" alt="Gallery image">
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal__content">
+            <button class="video-modal__close" aria-label="Close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>

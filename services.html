@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1ZBHQMYZN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-L1ZBHQMYZN');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="thehitchedstories Services - Wedding Photography, Pre-Wedding Shoots, Engagement Sessions, Destination Weddings, and Cinematic Wedding Films.">
+    <meta name="keywords"
+        content="wedding photography services, wedding packages, pre-wedding shoot, engagement photography, destination wedding photographer">
+    <meta name="author" content="thehitchedstories">
+
+    <title>Services | thehitchedstories</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Preconnect to Cloudinary CDN -->
+    <link rel="preconnect" href="https://res.cloudinary.com">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Additional styles for services page */
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4xl);
+            align-items: center;
+            padding: var(--space-4xl) 0;
+            border-bottom: 1px solid var(--beige);
+        }
+
+        .service-detail:last-child {
+            border-bottom: none;
+        }
+
+        .service-detail:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-detail:nth-child(even)>* {
+            direction: ltr;
+        }
+
+        .service-detail__image {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-detail__image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .service-detail__image:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-detail__content {
+            padding: var(--space-xl);
+        }
+
+        .service-detail__number {
+            font-family: var(--font-heading);
+            font-size: var(--text-5xl);
+            color: var(--beige);
+            margin-bottom: var(--space-md);
+        }
+
+        .service-detail__title {
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-detail__text {
+            color: var(--soft-gray);
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-detail__features {
+            margin-bottom: var(--space-xl);
+        }
+
+        .service-detail__features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+            color: var(--soft-gray);
+        }
+
+        .service-detail__features li::before {
+            content: '✓';
+            color: var(--muted-gold);
+            font-weight: bold;
+        }
+
+        .packages-section {
+            background-color: var(--cream);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .package-card {
+            background-color: var(--warm-white);
+            border-radius: var(--radius-md);
+            padding: var(--space-2xl);
+            text-align: center;
+            border: 1px solid var(--beige);
+            transition: var(--transition-base);
+            position: relative;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--muted-gold);
+        }
+
+        .package-card--featured {
+            border-color: var(--muted-gold);
+            border-width: 2px;
+        }
+
+        .package-card--featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--muted-gold);
+            color: var(--ivory);
+            padding: var(--space-xs) var(--space-md);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: var(--radius-sm);
+        }
+
+        .package-card__title {
+            font-family: var(--font-heading);
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-md);
+        }
+
+        .package-card__price {
+            font-family: var(--font-heading);
+            font-size: var(--text-4xl);
+            color: var(--muted-gold);
+            margin-bottom: var(--space-lg);
+        }
+
+        .package-card__price span {
+            font-size: var(--text-base);
+            color: var(--soft-gray);
+        }
+
+        .package-card__features {
+            text-align: left;
+            margin-bottom: var(--space-xl);
+        }
+
+        .package-card__features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+            color: var(--soft-gray);
+            font-size: var(--text-sm);
+        }
+
+        .package-card__features li::before {
+            content: '✓';
+            color: var(--muted-gold);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+
+            .service-detail,
+            .service-detail:nth-child(even) {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+
+            .service-detail__image img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">the<span>hitched</span>stories</a>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="about.html" class="nav__link">About</a></li>
+                <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+                <li><a href="services.html" class="nav__link nav__link--active">Services</a></li>
+                <li><a href="testimonials.html" class="nav__link">Testimonials</a></li>
+                <li><a href="contact.html" class="nav__link">Contact</a></li>
+            </ul>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Our Services</h1>
+            <p class="page-header__breadcrumb"><a href="index.html">Home</a> / Services</p>
+        </div>
+    </section>
+
+    <!-- Services Introduction -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-header__label">What We Offer</p>
+                <h2 class="section-header__title">Capturing Every Chapter<br>of Your Love Story</h2>
+                <div class="section-header__divider"></div>
+                <p class="section-header__text">From intimate pre-wedding sessions to grand destination celebrations, we
+                    offer comprehensive photography services tailored to your unique story.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <!-- Wedding Photography -->
+            <div class="service-detail reveal">
+                <div class="service-detail__image">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/gallery-1_zwppku"
+                        alt="Wedding Photography">
+                </div>
+                <div class="service-detail__content">
+                    <span class="service-detail__number">01</span>
+                    <h3 class="service-detail__title">Wedding Photography</h3>
+                    <p class="service-detail__text">Your wedding day is filled with countless precious moments—from the
+                        nervous anticipation of getting ready to the joyful celebration with loved ones. We capture it
+                        all with a blend of candid documentary style and elegant portraiture.</p>
+                    <ul class="service-detail__features">
+                        <li>Full-day coverage from preparations to reception</li>
+                        <li>Two professional photographers</li>
+                        <li>High-resolution edited images</li>
+                        <li>Online gallery for sharing</li>
+                        <li>Premium wedding album options</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--gold-outline">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Pre-Wedding Shoots -->
+            <div class="service-detail reveal">
+                <div class="service-detail__image">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/gallery-2_uqc5ay"
+                        alt="Pre-Wedding Photography">
+                </div>
+                <div class="service-detail__content">
+                    <span class="service-detail__number">02</span>
+                    <h3 class="service-detail__title">Pre-Wedding Shoots</h3>
+                    <p class="service-detail__text">A relaxed session before the big day—perfect for getting comfortable
+                        in front of the camera while creating beautiful images that celebrate your journey together.
+                        Choose your favorite location and let's create magic.</p>
+                    <ul class="service-detail__features">
+                        <li>Location of your choice</li>
+                        <li>2-3 hours of shooting time</li>
+                        <li>Multiple outfit changes</li>
+                        <li>100+ edited images</li>
+                        <li>Great for save-the-dates</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--gold-outline">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Engagement Sessions -->
+            <div class="service-detail reveal">
+                <div class="service-detail__image">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/gallery-4_nvqj8h"
+                        alt="Engagement Photography">
+                </div>
+                <div class="service-detail__content">
+                    <span class="service-detail__number">03</span>
+                    <h3 class="service-detail__title">Engagement Sessions</h3>
+                    <p class="service-detail__text">Just said yes? Let's capture the excitement and joy of your
+                        engagement! These sessions are intimate, personal, and perfect for announcing your upcoming
+                        wedding to the world.</p>
+                    <ul class="service-detail__features">
+                        <li>Intimate couple session</li>
+                        <li>1-2 hours of photography</li>
+                        <li>Ring and detail shots included</li>
+                        <li>Perfect for announcements</li>
+                        <li>Quick turnaround time</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--gold-outline">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Destination Weddings -->
+            <div class="service-detail reveal">
+                <div class="service-detail__image">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/hero-2_osgacs"
+                        alt="Destination Wedding Photography">
+                </div>
+                <div class="service-detail__content">
+                    <span class="service-detail__number">04</span>
+                    <h3 class="service-detail__title">Destination Weddings</h3>
+                    <p class="service-detail__text">Dream of saying "I do" on a Goan beach, a Rajasthani palace, or
+                        amidst the mountains? We travel across India and internationally to capture your destination
+                        wedding with the same passion and quality.</p>
+                    <ul class="service-detail__features">
+                        <li>Worldwide travel coverage</li>
+                        <li>Multi-day event packages</li>
+                        <li>Pre-wedding recce available</li>
+                        <li>Location scouting assistance</li>
+                        <li>Customized packages</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--gold-outline">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Wedding Films -->
+            <div class="service-detail reveal">
+                <div class="service-detail__image">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/hero-1_zo6gdi"
+                        alt="Wedding Films">
+                </div>
+                <div class="service-detail__content">
+                    <span class="service-detail__number">05</span>
+                    <h3 class="service-detail__title">Wedding Films</h3>
+                    <p class="service-detail__text">Relive your wedding day through cinema. Our wedding films combine
+                        stunning visuals, authentic audio, and thoughtful editing to create a movie you'll watch again
+                        and again.</p>
+                    <ul class="service-detail__features">
+                        <li>Cinematic highlight film (3-5 mins)</li>
+                        <li>Full ceremony and reception edits</li>
+                        <li>Drone footage included</li>
+                        <li>Professional audio capture</li>
+                        <li>Music licensed for your film</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--gold-outline">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="section packages-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-header__label">Investment</p>
+                <h2 class="section-header__title">Our Packages</h2>
+                <div class="section-header__divider"></div>
+                <p class="section-header__text">Every love story is unique, and so are our packages. Here's a starting
+                    point—we're happy to customize based on your needs.</p>
+            </div>
+
+            <div class="packages-grid">
+                <div class="package-card reveal reveal-delay-1">
+                    <h3 class="package-card__title">Essential</h3>
+                    <p class="package-card__price">₹1,25,000 <span>starting</span></p>
+                    <ul class="package-card__features">
+                        <li>8 hours of coverage</li>
+                        <li>Single photographer</li>
+                        <li>300+ edited images</li>
+                        <li>Online gallery</li>
+                        <li>Digital delivery</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--gold-outline">Get Quote</a>
+                </div>
+
+                <div class="package-card package-card--featured reveal reveal-delay-2">
+                    <h3 class="package-card__title">Signature</h3>
+                    <p class="package-card__price">₹2,25,000 <span>starting</span></p>
+                    <ul class="package-card__features">
+                        <li>Full-day coverage</li>
+                        <li>Two photographers</li>
+                        <li>500+ edited images</li>
+                        <li>Pre-wedding session included</li>
+                        <li>Premium wedding album</li>
+                        <li>Same-day slideshow</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--primary">Get Quote</a>
+                </div>
+
+                <div class="package-card reveal reveal-delay-3">
+                    <h3 class="package-card__title">Luxe</h3>
+                    <p class="package-card__price">₹3,75,000 <span>starting</span></p>
+                    <ul class="package-card__features">
+                        <li>Multi-day coverage</li>
+                        <li>Two photographers + assistant</li>
+                        <li>700+ edited images</li>
+                        <li>Cinematic wedding film</li>
+                        <li>Two premium albums</li>
+                        <li>Engagement session</li>
+                        <li>Priority editing</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--gold-outline">Get Quote</a>
+                </div>
+            </div>
+
+            <p class="text-center mt-xl reveal" style="color: var(--soft-gray); font-size: var(--text-sm);">
+                * All packages are customizable. Contact us for a personalized quote.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2 class="cta-section__title">Ready to Book Your Session?</h2>
+            <p class="cta-section__text">Let's discuss your vision and create a package that's perfect for your special
+                day.</p>
+            <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">the<span>hitched</span>stories</h3>
+                    <p class="footer__tagline">Capturing timeless love stories through authentic, emotional, and
+                        cinematic wedding photography.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/thehitchedstories" class="social-link" aria-label="Instagram"
+                            target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.wedmegood.com/profile/The-Hitched-Stories-2414582" class="social-link"
+                            aria-label="WedMeGood" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/919569154042" class="social-link" aria-label="WhatsApp" target="_blank"
+                            rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html" class="footer__link">Wedding Photography</a></li>
+                        <li><a href="services.html" class="footer__link">Pre-Wedding Shoots</a></li>
+                        <li><a href="services.html" class="footer__link">Engagement Sessions</a></li>
+                        <li><a href="services.html" class="footer__link">Destination Weddings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li><a href="mailto:contact@thehitchedstories.com"
+                                class="footer__link">contact@thehitchedstories.com</a></li>
+                        <li><a href="tel:+919876543210" class="footer__link">+91 98765 43210</a></li>
+                        <li><a href="contact.html" class="footer__link">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2026 thehitchedstories. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
