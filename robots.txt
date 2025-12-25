@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thehitchedstories.netlify.app/sitemap.xml
