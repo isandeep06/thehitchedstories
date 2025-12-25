@@ -590,7 +590,14 @@ p {
 /* ----- Gallery Grid ----- */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+/* Stories grid on homepage - 2 rows x 3 columns */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
 }
 
@@ -1498,8 +1505,9 @@ p {
         max-width: 280px;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    .gallery-grid,
+    .stories-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .testimonials-grid {
