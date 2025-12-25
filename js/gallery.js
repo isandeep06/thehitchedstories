@@ -161,8 +161,8 @@ function initVideoModal() {
 
     const videoContainer = videoModal.querySelector('.video-modal__content');
     const closeBtn = videoModal.querySelector('.video-modal__close');
-    // Support both local videos (data-video-src) and YouTube embeds (data-video-url)
-    const videoTriggers = document.querySelectorAll('[data-video-url], [data-video-src]');
+    // Support both local videos (data-video-src) and YouTube embeds (data-video-url, data-video)
+    const videoTriggers = document.querySelectorAll('[data-video-url], [data-video-src], [data-video]');
 
     function openVideoModal(videoSrc, isLocal) {
         // Clear container first
@@ -220,7 +220,7 @@ function initVideoModal() {
         trigger.addEventListener('click', function (e) {
             e.preventDefault();
             const localVideoSrc = this.dataset.videoSrc;
-            const youtubeUrl = this.dataset.videoUrl;
+            const youtubeUrl = this.dataset.videoUrl || this.dataset.video;
 
             if (localVideoSrc) {
                 openVideoModal(localVideoSrc, true);

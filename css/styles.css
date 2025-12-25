@@ -1819,6 +1819,31 @@ p {
     color: var(--muted-gold);
 }
 
+/* Video Play Button */
+.gallery-item__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--charcoal);
+    transition: var(--transition-base);
+    z-index: 10;
+}
+
+.gallery-item--video:hover .gallery-item__play {
+    background: var(--muted-gold);
+    color: white;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
 /* =====================================================
    ENHANCED ANIMATIONS & EFFECTS
    ===================================================== */
