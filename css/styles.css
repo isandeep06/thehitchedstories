@@ -590,24 +590,8 @@ p {
 /* ----- Gallery Grid ----- */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-auto-rows: 260px;
-    gap: var(--space-md);
-    grid-auto-flow: dense;
-}
-
-/* Masonry-style variations */
-.gallery-item--tall {
-    grid-row: span 2;
-}
-
-.gallery-item--wide {
-    grid-column: span 2;
-}
-
-.gallery-item--featured {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
 }
 
 /* Stories grid on homepage - 2 rows x 3 columns */
@@ -619,10 +603,10 @@ p {
 
 .gallery-item {
     position: relative;
+    aspect-ratio: 4/5;
     overflow: hidden;
     border-radius: var(--radius-md);
     cursor: pointer;
-    height: 100%;
 }
 
 .gallery-item img {
@@ -1570,7 +1554,6 @@ p {
     .gallery-grid {
         grid-template-columns: 1fr 1fr;
         gap: var(--space-sm);
-        grid-auto-rows: 180px;
     }
 
     .gallery-item {
