@@ -590,7 +590,7 @@ p {
 /* ----- Gallery Grid ----- */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
 }
 
@@ -1695,7 +1695,7 @@ p {
 /* Large screens / Desktop optimization */
 @media (min-width: 1200px) {
     .gallery-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .testimonials-grid {
@@ -1714,7 +1714,7 @@ p {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
