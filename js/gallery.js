@@ -25,9 +25,10 @@ function initGalleryFilters() {
 
             const filter = this.dataset.filter;
 
-            // Filter items - now 'all' is treated as a category, not showing everything
             galleryItems.forEach(item => {
-                if (item.dataset.category === filter) {
+                const isMatch = filter === 'all' || item.dataset.category === filter;
+
+                if (isMatch) {
                     item.style.display = '';
                     setTimeout(() => {
                         item.style.opacity = '1';
