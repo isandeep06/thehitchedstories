@@ -1476,6 +1476,91 @@ p {
         --space-4xl: 4rem;
     }
 
+    /* Mobile Pill-Shaped Header */
+    .nav {
+        padding: var(--space-md) var(--container-padding);
+    }
+
+    .nav__container {
+        background-color: rgba(255, 255, 255, 0.98);
+        border-radius: var(--radius-pill);
+        padding: var(--space-sm) var(--space-sm) var(--space-sm) var(--space-lg);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .nav--scrolled {
+        background-color: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
+    .nav--scrolled .nav__container {
+        background-color: rgba(255, 255, 255, 0.98);
+    }
+
+    .nav__logo {
+        color: var(--charcoal);
+        text-shadow: none;
+        font-size: var(--text-xl);
+    }
+
+    .nav__logo span {
+        color: var(--muted-gold);
+    }
+
+    .nav--scrolled .nav__logo {
+        color: var(--charcoal);
+    }
+
+    /* Circular Hamburger Button */
+    .nav__toggle {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-full);
+        background-color: #1a365d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+        transition: var(--transition-base);
+    }
+
+    .nav__toggle:hover,
+    .nav__toggle:focus {
+        background-color: #2c5282;
+        transform: scale(1.05);
+    }
+
+    .nav__toggle span {
+        width: 20px;
+        height: 2px;
+        background-color: #ffffff;
+        transition: var(--transition-base);
+    }
+
+    .nav__toggle.active {
+        background-color: var(--muted-gold);
+    }
+
+    .nav__toggle.active span {
+        background-color: #ffffff;
+    }
+
+    .nav__toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav__toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav__toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
     .nav__menu {
         position: fixed;
         top: 0;
