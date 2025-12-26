@@ -590,24 +590,18 @@ p {
 /* ----- Gallery Grid ----- */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 280px;
     gap: var(--space-md);
-    grid-auto-flow: dense;
 }
 
-/* Masonry-style variations */
-.gallery-item--tall {
-    grid-row: span 2;
-}
-
-.gallery-item--wide {
-    grid-column: span 2;
-}
-
+/* Masonry-style variations - disabled for simple grid */
+.gallery-item--tall,
+.gallery-item--wide,
 .gallery-item--featured {
-    grid-column: span 2;
-    grid-row: span 2;
+    /* All items same size in simple grid */
+    grid-row: span 1;
+    grid-column: span 1;
 }
 
 /* Stories grid on homepage - 2 rows x 3 columns */
