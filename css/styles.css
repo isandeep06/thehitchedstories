@@ -67,11 +67,11 @@
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
 
-    /* Transitions */
-    --transition-fast: 0.2s ease;
-    --transition-base: 0.3s ease;
-    --transition-slow: 0.5s ease;
-    --transition-slower: 0.8s ease;
+    /* Transitions - Optimized for snappy feel */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.2s ease;
+    --transition-slow: 0.35s ease;
+    --transition-slower: 0.5s ease;
 
     /* Border Radius */
     --radius-sm: 4px;
@@ -417,7 +417,7 @@ p {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 1.5s ease;
+    transition: opacity 0.8s ease;
 }
 
 .hero__slide.active {
@@ -1204,18 +1204,19 @@ p {
 }
 
 .animate-fade-in {
-    animation: fadeIn var(--transition-slow) ease forwards;
+    animation: fadeIn 0.3s ease forwards;
 }
 
 .animate-fade-in-up {
-    animation: fadeInUp var(--transition-slower) ease forwards;
+    animation: fadeInUp 0.4s ease forwards;
 }
 
-/* Scroll Animations */
+/* Scroll Animations - Optimized for speed */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    will-change: opacity, transform;
 }
 
 .reveal.active {
@@ -1224,15 +1225,15 @@ p {
 }
 
 .reveal-delay-1 {
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
 }
 
 .reveal-delay-2 {
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .reveal-delay-3 {
-    transition-delay: 0.3s;
+    transition-delay: 0.15s;
 }
 
 /* ----- Page Header (for inner pages) ----- */
