@@ -616,6 +616,19 @@ p {
     transition: transform var(--transition-slow);
 }
 
+/* Smooth lazy-load fade-in */
+.lazy-img {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity var(--transition-base), transform var(--transition-base);
+    background-color: var(--beige-light);
+}
+
+.lazy-img.is-loaded {
+    opacity: 1;
+    transform: none;
+}
+
 .gallery-item:hover img {
     transform: scale(1.05);
 }

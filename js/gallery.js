@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initLightbox();
     initVideoHover();
     initVideoModal();
+    initLazyImages();
 });
 
 /* ----- Gallery Filters ----- */
@@ -249,6 +250,24 @@ function initVideoModal() {
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && videoModal.classList.contains('active')) {
             closeVideoModal();
+        }
+    });
+}
+
+/* ----- Lazy Images Fade-in ----- */
+function initLazyImages() {
+    const lazyImgs = document.querySelectorAll('.gallery-grid img');
+    if (!lazyImgs.length) return;
+
+    lazyImgs.forEach(img => {
+        img.loading = 'lazy';
+        img.classList.add('lazy-img');
+
+        const markLoaded = () => img.classList.add('is-loaded');
+        if (img.complete) {
+            markLoaded();
+        } else {
+            img.addEventListener('load', markLoaded, { once: true });
         }
     });
 }
