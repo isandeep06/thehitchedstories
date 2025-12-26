@@ -1482,26 +1482,22 @@ p {
     }
 
     .nav__container {
-        background-color: rgba(255, 255, 255, 0.98);
+        background-color: transparent;
         border-radius: var(--radius-pill);
         padding: var(--space-sm) var(--space-sm) var(--space-sm) var(--space-lg);
+        transition: var(--transition-base);
+    }
+
+    /* Pill shape appears only after scrolling */
+    .nav--scrolled .nav__container {
+        background-color: rgba(255, 255, 255, 0.98);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10px);
     }
 
-    .nav--scrolled {
-        background-color: transparent;
-        box-shadow: none;
-        backdrop-filter: none;
-    }
-
-    .nav--scrolled .nav__container {
-        background-color: rgba(255, 255, 255, 0.98);
-    }
-
     .nav__logo {
-        color: var(--charcoal);
-        text-shadow: none;
+        color: var(--ivory);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         font-size: var(--text-xl);
     }
 
@@ -1511,6 +1507,7 @@ p {
 
     .nav--scrolled .nav__logo {
         color: var(--charcoal);
+        text-shadow: none;
     }
 
     /* Circular Hamburger Button */
