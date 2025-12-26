@@ -620,7 +620,7 @@ p {
     overflow: hidden;
     border-radius: var(--radius-md);
     cursor: pointer;
-    height: 100%;
+    aspect-ratio: 4/3;
 }
 
 .gallery-item img {
