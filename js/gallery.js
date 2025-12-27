@@ -254,14 +254,38 @@ function initVideoModal() {
     });
 }
 
-/* ----- Lazy Images Fade-in ----- */
+/* ----- Lazy Images Fade-in with Responsive Cloudinary ----- */
 function initLazyImages() {
     const lazyImgs = document.querySelectorAll('.gallery-grid img');
     if (!lazyImgs.length) return;
 
+    // Determine optimal image width based on screen size and grid columns
+    const screenWidth = window.innerWidth;
+    let optimalWidth;
+
+    if (screenWidth <= 480) {
+        optimalWidth = 300;  // Mobile: single column, smaller images
+    } else if (screenWidth <= 768) {
+        optimalWidth = 400;  // Tablet: 2 columns
+    } else {
+        optimalWidth = 500;  // Desktop: 3 columns
+    }
+
     lazyImgs.forEach(img => {
         img.loading = 'lazy';
+        img.decoding = 'async';
         img.classList.add('lazy-img');
+
+        // Optimize Cloudinary URLs by adding responsive transformations
+        const src = img.getAttribute('src');
+        if (src && src.includes('res.cloudinary.com') && !src.includes(',w_')) {
+            // Add width transformation for Cloudinary images that don't have one
+            const optimizedSrc = src.replace(
+                '/upload/',
+                `/upload/f_auto,q_auto,w_${optimalWidth}/`
+            );
+            img.setAttribute('src', optimizedSrc);
+        }
 
         const markLoaded = () => img.classList.add('is-loaded');
         if (img.complete) {

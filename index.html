@@ -59,9 +59,13 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Preload critical assets -->
-    <link rel="preload" href="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto/hero-1_zo6gdi"
-        as="image" fetchpriority="high">
+    <!-- Preload critical assets with responsive sizes -->
+    <link rel="preload"
+        href="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_768/hero-1_zo6gdi" as="image"
+        imagesrcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_480/hero-1_zo6gdi 480w,
+                     https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_768/hero-1_zo6gdi 768w,
+                     https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_1200/hero-1_zo6gdi 1200w"
+        imagesizes="100vw" fetchpriority="high">
     <!-- Schema Markup (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -134,12 +138,21 @@
     <section class="hero">
         <div class="hero__slides">
             <div class="hero__slide active">
-                <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_1920/hero-1_zo6gdi"
-                    alt="Lucknow wedding couple during golden hour">
+                <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_768/hero-1_zo6gdi"
+                    srcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_480/hero-1_zo6gdi 480w,
+                            https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_768/hero-1_zo6gdi 768w,
+                            https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_1200/hero-1_zo6gdi 1200w,
+                            https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_1920/hero-1_zo6gdi 1920w"
+                    sizes="100vw" alt="Lucknow wedding couple during golden hour" decoding="async">
             </div>
             <div class="hero__slide">
-                <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_1920/hero-2_osgacs"
-                    alt="Bride in vineyard - Best wedding photographer Lucknow" loading="lazy">
+                <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_768/hero-2_osgacs"
+                    srcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_480/hero-2_osgacs 480w,
+                            https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_768/hero-2_osgacs 768w,
+                            https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_1200/hero-2_osgacs 1200w,
+                            https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_1920/hero-2_osgacs 1920w"
+                    sizes="100vw" alt="Bride in vineyard - Best wedding photographer Lucknow" loading="lazy"
+                    decoding="async">
             </div>
         </div>
         <div class="hero__overlay"></div>
@@ -257,8 +270,12 @@
 
             <div class="stories-grid">
                 <a href="stories/hema-prashant.html" class="gallery-item reveal reveal-delay-1">
-                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Hema_Prashant_gycirr"
-                        alt="Hema & Prashant Wedding" loading="lazy">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Hema_Prashant_gycirr"
+                        srcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_300/Hema_Prashant_gycirr 300w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Hema_Prashant_gycirr 400w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_600/Hema_Prashant_gycirr 600w"
+                        sizes="(max-width: 768px) 100vw, 33vw" alt="Hema & Prashant Wedding" loading="lazy"
+                        decoding="async">
                     <div class="gallery-item__overlay">
                         <div class="gallery-item__info">
                             <h4 class="gallery-item__title">Hema & Prashant</h4>
@@ -268,8 +285,12 @@
                 </a>
 
                 <a href="stories/neha-amar.html" class="gallery-item reveal reveal-delay-2">
-                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/gallery-1_zwppku"
-                        alt="Wedding Photography in Lucknow" loading="lazy">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/gallery-1_zwppku"
+                        srcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_300/gallery-1_zwppku 300w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/gallery-1_zwppku 400w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_600/gallery-1_zwppku 600w"
+                        sizes="(max-width: 768px) 100vw, 33vw" alt="Wedding Photography in Lucknow" loading="lazy"
+                        decoding="async">
                     <div class="gallery-item__overlay">
                         <div class="gallery-item__info">
                             <h4 class="gallery-item__title">Neha & Amar</h4>
@@ -279,8 +300,12 @@
                 </a>
 
                 <a href="stories/shradha-vikas.html" class="gallery-item reveal reveal-delay-3">
-                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Shradha_Vikas_xdrtsd"
-                        alt="Shradha & Vikas Story" loading="lazy">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Shradha_Vikas_xdrtsd"
+                        srcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_300/Shradha_Vikas_xdrtsd 300w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Shradha_Vikas_xdrtsd 400w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_600/Shradha_Vikas_xdrtsd 600w"
+                        sizes="(max-width: 768px) 100vw, 33vw" alt="Shradha & Vikas Story" loading="lazy"
+                        decoding="async">
                     <div class="gallery-item__overlay">
                         <div class="gallery-item__info">
                             <h4 class="gallery-item__title">Shradha & Vikas</h4>
@@ -290,8 +315,11 @@
                 </a>
 
                 <a href="stories/rita-raju.html" class="gallery-item reveal reveal-delay-1">
-                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Rita_Raju_dxnf04"
-                        alt="Rita & Raju Story" loading="lazy">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Rita_Raju_dxnf04"
+                        srcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_300/Rita_Raju_dxnf04 300w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Rita_Raju_dxnf04 400w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_600/Rita_Raju_dxnf04 600w"
+                        sizes="(max-width: 768px) 100vw, 33vw" alt="Rita & Raju Story" loading="lazy" decoding="async">
                     <div class="gallery-item__overlay">
                         <div class="gallery-item__info">
                             <h4 class="gallery-item__title">Rita & Raju</h4>
@@ -301,8 +329,12 @@
                 </a>
 
                 <a href="stories/mera-vishal.html" class="gallery-item reveal reveal-delay-2">
-                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Mera_and_vishal_mdygfg"
-                        alt="Mera & Vishal Story" loading="lazy">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Mera_and_vishal_mdygfg"
+                        srcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_300/Mera_and_vishal_mdygfg 300w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Mera_and_vishal_mdygfg 400w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_600/Mera_and_vishal_mdygfg 600w"
+                        sizes="(max-width: 768px) 100vw, 33vw" alt="Mera & Vishal Story" loading="lazy"
+                        decoding="async">
                     <div class="gallery-item__overlay">
                         <div class="gallery-item__info">
                             <h4 class="gallery-item__title">Mera & Vishal</h4>
@@ -312,8 +344,12 @@
                 </a>
 
                 <a href="stories/sakshi-abhinav.html" class="gallery-item reveal reveal-delay-3">
-                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_800/Sakshi_Abhinav_i6uycr"
-                        alt="Sakshi & Abhinav Story" loading="lazy">
+                    <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Sakshi_Abhinav_i6uycr"
+                        srcset="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_300/Sakshi_Abhinav_i6uycr 300w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_400/Sakshi_Abhinav_i6uycr 400w,
+                                https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_600/Sakshi_Abhinav_i6uycr 600w"
+                        sizes="(max-width: 768px) 100vw, 33vw" alt="Sakshi & Abhinav Story" loading="lazy"
+                        decoding="async">
                     <div class="gallery-item__overlay">
                         <div class="gallery-item__info">
                             <h4 class="gallery-item__title">Sakshi & Abhinav</h4>
@@ -345,7 +381,7 @@
                         tells the story of our love, and we couldn't be more grateful.</p>
                     <div class="testimonial-card__author">
                         <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_100,h_100,c_fill/instagram_DOBEhEWE5HS_1_yyzhzk"
-                            alt="Hema & Prashant" class="testimonial-card__image" loading="lazy">
+                            alt="Hema & Prashant" class="testimonial-card__image" loading="lazy" decoding="async">
                         <div class="testimonial-card__info">
                             <h4>Hema & Prashant</h4>
                             <p>Mumbai, 2024</p>
@@ -359,7 +395,7 @@
                         captured moments we didn't even know happened.</p>
                     <div class="testimonial-card__author">
                         <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_100,h_100,c_fill/instagram_DOBEhEWE5HS_2_m5zsn9"
-                            alt="Neha & Amar" class="testimonial-card__image" loading="lazy">
+                            alt="Neha & Amar" class="testimonial-card__image" loading="lazy" decoding="async">
                         <div class="testimonial-card__info">
                             <h4>Neha & Amar</h4>
                             <p>Delhi, 2024</p>
@@ -373,7 +409,7 @@
                         wedding photos are absolute perfection.</p>
                     <div class="testimonial-card__author">
                         <img src="https://res.cloudinary.com/thehitchedstories/image/upload/f_auto,q_auto,w_100,h_100,c_fill/instagram_DOBEhEWE5HS_3_vytqau"
-                            alt="Shradha & Vikas" class="testimonial-card__image" loading="lazy">
+                            alt="Shradha & Vikas" class="testimonial-card__image" loading="lazy" decoding="async">
                         <div class="testimonial-card__info">
                             <h4>Shradha & Vikas</h4>
                             <p>Goa, 2023</p>
